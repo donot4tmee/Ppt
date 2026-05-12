@@ -61,54 +61,54 @@ const Slide3Solution = () => {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 h-full items-center overflow-y-auto lg:overflow-visible">
-        <div className="md:col-span-8 flex flex-col justify-center space-y-4 md:space-y-6 lg:space-y-8">
-          <div className="space-y-2 md:space-y-4">
-             <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-white uppercase italic tracking-tighter">Planned Intelligence.</h3>
-             <p className="text-sm md:text-base lg:text-lg font-bold text-[#E0E7E1] leading-relaxed opacity-80 italic">
+        <div className="md:col-span-8 flex flex-col justify-center space-y-3 md:space-y-4 lg:space-y-6">
+          <div className="space-y-1 md:space-y-2">
+             <h3 className="text-2xl md:text-3xl font-black text-white uppercase italic tracking-tighter">Planned Intelligence.</h3>
+             <p className="text-sm md:text-base font-bold text-[#E0E7E1] leading-snug opacity-80 italic">
                 We aren't just picking any model. We have identified **MobileNetV3-Small**, a highly optimized **Convolutional Neural Network (CNN)**, as our primary candidate—offering the best balance of accuracy and extreme efficiency for real-time detection on entry-level hardware.
              </p>
           </div>
           
-          <div className="grid grid-cols-2 gap-3 md:gap-6 relative z-10">
+          <div className="grid grid-cols-2 gap-3 md:gap-4 relative z-10">
              <motion.div 
                layoutId="arch-box"
                onClick={() => setActiveModal('arch')}
-               className="p-4 md:p-6 bg-[#1B2919] rounded-2xl md:rounded-3xl border border-[#2D452B] relative overflow-hidden group cursor-pointer hover:border-[#76E082] transition-colors"
+               className="p-3 md:p-4 bg-[#1B2919] rounded-xl border border-[#2D452B] relative overflow-hidden group cursor-pointer hover:border-[#76E082] transition-colors"
              >
-                <div className="text-[8px] md:text-[10px] font-black text-[#76E082] uppercase mb-1 flex items-center justify-between">
-                  Proposed Architecture
-                  <BarChart3 size={12} className="opacity-50" />
+                <div className="text-[8px] md:text-[10px] font-black text-[#76E082] uppercase mb-0.5 flex items-center justify-between">
+                  Architecture
+                  <BarChart3 size={10} className="opacity-50" />
                 </div>
-                <div className="text-base md:text-xl lg:text-2xl font-black text-white italic">MobileNetV3-S</div>
-                <Cpu size={24} className="md:size-10 absolute -right-1 -bottom-1 text-[#76E082]/10 group-hover:scale-125 transition-transform" />
+                <div className="text-base md:text-lg font-black text-white italic">MobileNetV3-S</div>
+                <Cpu size={20} className="md:size-8 absolute -right-1 -bottom-1 text-[#76E082]/10 group-hover:scale-125 transition-transform" />
              </motion.div>
              <motion.div 
                layoutId="acc-box"
                onClick={() => setActiveModal('acc')}
-               className="p-4 md:p-6 bg-[#76E082] rounded-2xl md:rounded-3xl relative overflow-hidden group cursor-pointer hover:bg-white transition-colors"
+               className="p-3 md:p-4 bg-[#76E082] rounded-xl relative overflow-hidden group cursor-pointer hover:bg-white transition-colors"
              >
-                <div className="text-[8px] md:text-[10px] font-black text-black/60 uppercase mb-1 flex items-center justify-between">
-                  Target Accuracy
-                  <BarChart3 size={12} className="opacity-50" />
+                <div className="text-[8px] md:text-[10px] font-black text-black/60 uppercase mb-0.5 flex items-center justify-between">
+                  Accuracy
+                  <BarChart3 size={10} className="opacity-50" />
                 </div>
-                <div className="text-base md:text-xl lg:text-2xl font-black text-black italic">90%+ Predicted</div>
-                <Target size={24} className="md:size-10 absolute -right-1 -bottom-1 text-black/10 group-hover:scale-125 transition-transform" />
+                <div className="text-base md:text-lg font-black text-black italic">90%+ Predicted</div>
+                <Target size={20} className="md:size-8 absolute -right-1 -bottom-1 text-black/10 group-hover:scale-125 transition-transform" />
              </motion.div>
           </div>
         </div>
         
-        <div className="md:col-span-4 h-full flex flex-col justify-center gap-4 md:gap-6 relative z-10 py-4 md:py-0">
+        <div className="md:col-span-4 flex flex-col justify-center gap-4 relative z-10 py-4 md:py-0">
            <motion.div 
              layoutId="speed-box"
              onClick={() => setActiveModal('speed')}
-             className="p-4 md:p-6 lg:p-8 bg-[#1B2919] rounded-2xl md:rounded-3xl border-r-4 md:border-r-8 border-[#76E082] space-y-1 md:space-y-2 cursor-pointer hover:bg-[#253822] transition-colors shadow-xl"
+             className="p-4 md:p-6 bg-[#1B2919] rounded-2xl md:rounded-3xl border-r-4 md:border-r-8 border-[#76E082] space-y-1 md:space-y-2 cursor-pointer hover:bg-[#253822] transition-colors shadow-xl"
            >
               <div className="text-[8px] md:text-[10px] font-black text-[#76E082] uppercase tracking-[0.2em] italic flex items-center justify-between">
                 Target Speed
                 <BarChart3 size={12} className="opacity-50" />
               </div>
-              <div className="text-3xl md:text-5xl lg:text-6xl font-black text-white italic tracking-tighter">&lt;1<span className="text-[10px] ml-1">ms</span></div>
-              <p className="text-[8px] font-bold text-gray-500 uppercase italic">Planned real-time processing on mobile CPUs</p>
+              <div className="text-3xl md:text-5xl font-black text-white italic tracking-tighter">&lt;1<span className="text-[10px] ml-1">ms</span></div>
+              <p className="text-[8px] font-bold text-gray-500 uppercase italic leading-tight">Planned real-time processing on mobile CPUs</p>
            </motion.div>
         </div>
       </div>
@@ -209,47 +209,47 @@ const Slide4Data = () => {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 h-full items-center relative z-10 overflow-y-auto lg:overflow-visible pb-4 py-4 md:py-0">
-        <div className="md:col-span-5 flex flex-col gap-4 md:gap-6">
-          <div className="p-4 md:p-8 rounded-2xl md:rounded-3xl bg-white text-black relative shadow-2xl md:skew-x-3 transition-transform hover:skew-x-0">
-            <div className="text-[10px] md:text-xs font-black uppercase tracking-widest mb-1">Planned Source</div>
-            <div className="text-xl md:text-3xl font-black italic tracking-tighter mb-2 md:mb-4 leading-none uppercase">Visayas State <br/>University</div>
-            <p className="text-sm md:text-lg font-bold opacity-70 italic tracking-tight">Direct field imagery collection.</p>
+        <div className="md:col-span-5 flex flex-col gap-3 md:gap-4">
+          <div className="p-3 md:p-6 rounded-xl md:rounded-2xl bg-white text-black relative shadow-2xl md:skew-x-3 transition-transform hover:skew-x-0">
+            <div className="text-[10px] md:text-xs font-black uppercase tracking-widest mb-0.5">Planned Source</div>
+            <div className="text-lg md:text-2xl font-black italic tracking-tighter mb-1 md:mb-2 leading-tight uppercase">Visayas State <br/>University</div>
+            <p className="text-xs md:text-base font-bold opacity-70 italic tracking-tight">Direct field imagery collection.</p>
           </div>
           <motion.div 
             layoutId="samples-box"
             onClick={() => setActiveModal('samples')}
-            className="p-4 md:p-8 rounded-2xl md:rounded-3xl bg-[#1B2919] border border-[#2D452B] cursor-pointer hover:border-[#76E082] transition-all group"
+            className="p-3 md:p-6 rounded-xl md:rounded-2xl bg-[#1B2919] border border-[#2D452B] cursor-pointer hover:border-[#76E082] transition-all group"
           >
-            <div className="flex justify-between items-center mb-2">
+            <div className="flex justify-between items-center mb-1">
               <div className="text-[10px] md:text-xs font-black text-[#76E082] uppercase tracking-widest">Target Samples</div>
-              <PieIcon size={14} className="text-[#76E082] opacity-50 group-hover:opacity-100 transition-opacity" />
+              <PieIcon size={12} className="text-[#76E082] opacity-50 group-hover:opacity-100 transition-opacity" />
             </div>
-            <div className="text-4xl md:text-7xl font-black text-white italic leading-none tracking-tighter">5,000+</div>
-            <div className="h-1.5 md:h-2 w-full bg-[#1B1B1B] mt-4 md:mt-6 rounded-full overflow-hidden">
+            <div className="text-3xl md:text-5xl font-black text-white italic leading-none tracking-tighter">5,000+</div>
+            <div className="h-1 md:h-1.5 w-full bg-[#1B1B1B] mt-3 md:mt-4 rounded-full overflow-hidden">
               <div className="h-full w-[10%] bg-[#76E082]" />
             </div>
           </motion.div>
         </div>
         
-        <div className="md:col-span-7 md:pl-12 space-y-6 md:space-y-12">
-            <div className="space-y-2 md:space-y-4">
-              <h3 className="text-2xl md:text-4xl font-black text-white italic uppercase tracking-tighter leading-none">A planned library of <span className="text-[#76E082]">endemic species.</span></h3>
-              <p className="text-sm md:text-lg font-bold text-gray-400 italic">Data will come from field captures, historischen records, and manual expert verification.</p>
+        <div className="md:col-span-7 md:pl-8 space-y-4 md:space-y-8">
+            <div className="space-y-1 md:space-y-2">
+              <h3 className="text-xl md:text-3xl font-black text-white italic uppercase tracking-tighter leading-none">A planned library of <br/><span className="text-[#76E082]">endemic species.</span></h3>
+              <p className="text-xs md:text-base font-bold text-gray-400 italic">Data will come from field captures, record analysis, and manual expert verification.</p>
             </div>
             
             <div className="grid grid-cols-2 gap-4">
-              <div className="flex items-center gap-3 md:gap-4">
-                  <div className="w-1.5 md:w-2 h-10 md:h-12 bg-[#76E082]" />
+              <div className="flex items-center gap-2 md:gap-4">
+                  <div className="w-1 md:w-1.5 h-8 md:h-10 bg-[#76E082]" />
                   <div>
-                    <div className="text-[10px] md:text-sm font-black text-white">PRIORITY GRASSES</div>
-                    <div className="text-[8px] md:text-[10px] font-mono text-gray-500">Planned: Energy focus</div>
+                    <div className="text-[10px] md:text-xs font-black text-white">PRIORITY GRASSES</div>
+                    <div className="text-[8px] md:text-[9px] font-mono text-gray-500 uppercase">Energy focus</div>
                   </div>
               </div>
-              <div className="flex items-center gap-3 md:gap-4">
-                  <div className="w-1.5 md:w-2 h-10 md:h-12 bg-white" />
+              <div className="flex items-center gap-2 md:gap-4">
+                  <div className="w-1 md:w-1.5 h-8 md:h-10 bg-white" />
                   <div>
-                    <div className="text-[10px] md:text-sm font-black text-white">TROPICAL LEGUMES</div>
-                    <div className="text-[8px] md:text-[10px] font-mono text-gray-400">Planned: Protein focus</div>
+                    <div className="text-[10px] md:text-xs font-black text-white">TROPICAL LEGUMES</div>
+                    <div className="text-[8px] md:text-[9px] font-mono text-gray-400 uppercase">Protein focus</div>
                   </div>
               </div>
             </div>
@@ -334,22 +334,22 @@ const Slide5Impact = () => {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 h-full items-center relative z-10 overflow-y-auto lg:overflow-visible">
-        <div className="md:col-span-6 space-y-4 md:space-y-8">
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-white italic uppercase tracking-tighter mb-4 md:mb-8 leading-none">Ethical <br /><span className="text-[#76E082]">Precision.</span></h3>
-          <div className="grid grid-cols-1 gap-3 md:gap-4">
+        <div className="md:col-span-6 space-y-3 md:space-y-6">
+          <h3 className="text-3xl md:text-4xl font-black text-white italic uppercase tracking-tighter mb-2 md:mb-4 leading-none">Ethical <br /><span className="text-[#76E082]">Precision.</span></h3>
+          <div className="grid grid-cols-1 gap-2 md:gap-3">
              {impactData.map((item, i) => (
                <motion.div 
                  layoutId={`impact-box-${item.id}`}
                  key={i} 
                  onClick={() => setActiveModal(item.id)}
-                 className="flex gap-4 md:gap-6 p-4 md:p-6 bg-[#1B2919] border border-[#2D452B] rounded-2xl relative overflow-hidden group cursor-pointer hover:border-[#76E082] transition-colors"
+                 className="flex gap-4 p-3 md:p-4 bg-[#1B2919] border border-[#2D452B] rounded-xl relative overflow-hidden group cursor-pointer hover:border-[#76E082] transition-colors"
                >
                   <div className="text-2xl md:text-3xl font-black text-white/5 absolute -top-1 -left-1 italic">0{i+1}</div>
-                  <div className="relative z-10 flex gap-3 md:gap-4 items-center">
+                  <div className="relative z-10 flex gap-3 items-center">
                     <div className="shrink-0">{item.icon}</div>
                     <div>
-                      <div className="text-[10px] font-black text-[#76E082] uppercase mb-1 italic tracking-widest">{item.t}</div>
-                      <p className="text-[10px] md:text-sm font-bold text-gray-400 leading-tight italic">{item.d}</p>
+                      <div className="text-[9px] font-black text-[#76E082] uppercase mb-0.5 italic tracking-widest">{item.t}</div>
+                      <p className="text-[9px] md:text-xs font-bold text-gray-400 leading-tight italic">{item.d}</p>
                     </div>
                   </div>
                </motion.div>
@@ -357,7 +357,7 @@ const Slide5Impact = () => {
           </div>
         </div>
         
-        <div className="md:col-span-12 lg:col-span-6 md:pl-12 flex items-center justify-center relative py-8 md:py-0">
+        <div className="md:col-span-12 lg:col-span-6 md:pl-8 flex items-center justify-center relative py-6 md:py-0">
            <div className="absolute inset-x-0 inset-y-0 bg-[#76E082]/5 blur-3xl rounded-full" />
            <motion.div 
              layoutId="ethical-badge"
@@ -509,26 +509,26 @@ export default function App() {
       title: "Title & Team",
       subtitle: "Project Proposal | Team DTG",
       content: (
-        <div className="flex flex-col items-center justify-center h-full text-center space-y-4 md:space-y-6 lg:space-y-8 overflow-y-auto lg:overflow-visible py-4 md:py-0">
+        <div className="flex flex-col items-center justify-center h-full text-center space-y-3 md:space-y-4 lg:space-y-6 overflow-y-auto lg:overflow-visible py-4 md:py-0">
           <div className="relative">
-            <div className="text-[60px] md:text-[100px] lg:text-[140px] font-black text-[#76E082] leading-none tracking-tighter italic uppercase opacity-20 absolute -top-8 md:-top-12 lg:-top-16 inset-x-0 select-none">
+            <div className="text-[50px] md:text-[80px] lg:text-[120px] font-black text-[#76E082] leading-none tracking-tighter italic uppercase opacity-20 absolute -top-6 md:-top-10 lg:-top-14 inset-x-0 select-none">
               DTG
             </div>
             <motion.div 
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              className="relative z-10 space-y-1 md:space-y-2"
+              className="relative z-10 space-y-1"
             >
-              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter leading-none uppercase italic text-white mb-2 md:mb-4">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter leading-none uppercase italic text-white mb-2">
                 Forage.AI
               </h1>
-              <p className="text-[10px] md:text-sm lg:text-xl font-bold tracking-tight text-[#E0E7E1] uppercase bg-[#1B2919] px-4 md:px-6 py-1 md:py-2 inline-block rounded-lg shadow-xl mb-4 md:mb-8">
+              <p className="text-[9px] md:text-xs lg:text-lg font-bold tracking-tight text-[#E0E7E1] uppercase bg-[#1B2919] px-4 py-1 inline-block rounded-lg shadow-xl mb-2 md:mb-4">
                 A Proposed CNN-Based Real-Time Forage Classifier
               </p>
             </motion.div>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-2 md:gap-3 lg:gap-4 w-full max-w-6xl pt-4 md:pt-6 lg:pt-8 border-t border-[#2D452B]">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3 w-full max-w-6xl pt-3 md:pt-4 border-t border-[#2D452B]">
             {[
               { name: "Radz Ponce Moreno", role: "Industry Lead" },
               { name: "Red Kyle", role: "Ethics and Risk Officer" },
@@ -538,9 +538,9 @@ export default function App() {
               { name: "Aj Kent Bustamante", role: "Tech Strategist" },
               { name: "Ervin James Caballes", role: "Ethics and Risk Officer" },
             ].map((m, i) => (
-              <div key={i} className="p-2 md:p-3 lg:p-4 bg-[#1B2919] rounded-lg md:rounded-xl border border-[#2D452B] w-[140px] md:w-[180px] lg:w-[260px]">
-                <div className="text-[#76E082] font-black italic uppercase text-[8px] md:text-[9px] lg:text-[11px] mb-0.5 md:mb-1 leading-tight">{m.name}</div>
-                <div className="text-[6px] md:text-[8px] lg:text-[9px] font-mono text-gray-500 uppercase tracking-widest leading-tight">{m.role}</div>
+              <div key={i} className="p-2 md:p-3 bg-[#1B2919] rounded-lg border border-[#2D452B] w-[130px] md:w-[160px] lg:w-[220px]">
+                <div className="text-[#76E082] font-black italic uppercase text-[8px] md:text-[9px] lg:text-[10px] mb-0.5 leading-tight">{m.name}</div>
+                <div className="text-[6px] md:text-[7px] lg:text-[8px] font-mono text-gray-500 uppercase tracking-widest leading-tight">{m.role}</div>
               </div>
             ))}
           </div>
@@ -762,20 +762,20 @@ export default function App() {
       <div className="w-full max-w-[1600px] aspect-video bg-[#0C120B] border-4 md:border-8 border-[#1B2919] relative flex flex-col overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.5)]">
         
         {/* Header (from Design) */}
-        <header className="flex justify-between items-end px-6 md:px-12 pt-6 md:pt-12 pb-4 md:pb-8 border-b border-[#2D452B] z-10">
+        <header className="flex justify-between items-end px-6 md:px-12 pt-4 md:pt-8 pb-3 md:pb-6 border-b border-[#2D452B] z-10">
           <div className="flex flex-col">
-            <span className="text-[#76E082] font-mono text-[8px] md:text-[10px] tracking-[0.4em] uppercase mb-1 md:mb-3 font-black italic">
+            <span className="text-[#76E082] font-mono text-[8px] md:text-[10px] tracking-[0.4em] uppercase mb-1 md:mb-2 font-black italic">
               {slides[currentSlide].subtitle}
             </span>
             <div className="flex items-center gap-2 md:gap-4">
               <div className="w-8 h-8 md:w-10 md:h-10 bg-[#76E082] rounded flex items-center justify-center text-black text-xl md:text-2xl font-black italic">F</div>
-              <h1 className="text-3xl md:text-6xl font-black tracking-tighter leading-none uppercase italic text-white line-clamp-1">
+              <h1 className="text-3xl md:text-5xl font-black tracking-tighter leading-none uppercase italic text-white line-clamp-1">
                 Forage.AI
               </h1>
             </div>
           </div>
           <div className="text-right hidden sm:block">
-            <p className="text-sm md:text-xl font-bold leading-tight uppercase tracking-tighter">
+            <p className="text-sm md:text-lg font-bold leading-tight uppercase tracking-tighter">
               CNN-Based Real-Time<br />
               <span className="text-[#76E082]">Crop Classification</span>
             </p>
@@ -783,7 +783,7 @@ export default function App() {
         </header>
 
         {/* Slide Viewport */}
-        <main className="flex-grow relative px-6 md:px-12 pt-4 md:pt-12 pb-2 md:pb-4 overflow-y-auto lg:overflow-hidden">
+        <main className="flex-grow relative px-6 md:px-12 pt-4 md:pt-8 pb-2 md:pb-4 overflow-y-auto lg:overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
